@@ -1,0 +1,113 @@
+﻿Build1=Default,b4a.TaxCalculator
+File1=Main.bal
+FileGroup1=Default Group
+Group=Default Group
+IconFile=
+Library1=core
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="26"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.DarkTheme)~\n~'End of default text.~\n~
+NumberOfFiles=1
+NumberOfLibraries=1
+NumberOfModules=0
+Version=8.3
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: Tax Calculator
+	#VersionCode: 1
+	#VersionName: beta
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+	Private btnCalcul, bntInv, btnBS As Button
+	Private edtResultat As EditText
+	Private lblTotal As Label
+	Private lblTVQ As Label
+	Private lblTPS As Label
+	Public Montant = 0, MontantAp = 0, gtotal = 0 As Float
+	
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	Activity.LoadLayout("Main")
+	
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub btnCalcul_Click
+	Log("btnAction_click")
+	If edtResultat.Text = "" Then
+		Msgbox("erreur","")
+	Else
+		Montant = edtResultat.Text
+		calcul
+	End If
+	
+End Sub
+
+Private Sub btnInv_Click
+	Log("btnInv_click")
+	If edtResultat.Text = "" Then
+		Msgbox("erreur enter un montant apres les taxes","")
+	Else
+		Montant = edtResultat.Text
+		Montant = MontantAp / 1.14975
+		calcul
+		If gtotal <> MontantAp Then
+			Msgbox("erreur de cenne","IMPORTANT")
+			Log(calcul)
+		End If
+	End If
+
+End Sub
+
+Sub pourcent(Taux As Float, Total As Float) As Float
+	Private Taxes As Float
+	Log("test")
+	Taxes = Total * (Taux / 100)
+	Return Taxes
+	
+End Sub
+
+Sub calcul()
+	Log("calcul sub")
+	edtResultat.Text = Round2(Montant,2)
+	lblTPS.Text = Round2(pourcent(5, Montant),2)
+	Log(lblTPS.Text)
+	lblTVQ.Text = Round2(pourcent(9.975, Montant),2)
+	Log(lblTVQ.Text)
+	gtotal = Montant + lblTPS.Text + lblTVQ.Text
+	lblTotal.Text = Round2(gtotal,2)
+	
+End Sub
+
+Sub btnBS_Click
+	edtResultat.Text = ""
+	lblTVQ.Text = ""
+	lblTPS.Text = ""
+	lblTotal.Text = 0
+	edtResultat.RequestFocus
+
+End Sub

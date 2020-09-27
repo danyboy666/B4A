@@ -1,0 +1,123 @@
+﻿Build1=Default,b4a.PINLogin
+File1=Layout1.bal
+FileGroup1=Default Group
+Group=Default Group
+IconFile=
+Library1=core
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="26"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.DarkTheme)~\n~'End of default text.~\n~
+NumberOfFiles=1
+NumberOfLibraries=1
+NumberOfModules=0
+Version=8.3
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: PIN Login
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+
+	Private edtPWD As EditText
+	Private btnCE, btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9 As Button 'Button declaration
+	Private pnlKey1 As Panel
+	Private pnlKey2 As Panel
+	Private pnlKey3 As Panel
+	Private pnlKey4 As Panel
+	
+	Private btnValue As String
+	Private count = 0, attempt = 0 As Int
+	Private master As String = "1234"
+	Private temp As String
+	
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	Activity.LoadLayout("Layout1")
+
+	pnlKey1.Color = Colors.White
+	pnlKey2.Color = Colors.White
+	pnlKey3.Color = Colors.White
+	pnlKey4.Color = Colors.White
+		
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+
+Sub edtPWD_TextChanged (Old As String, New As String)
+	
+End Sub
+
+Sub btnEvent_Click
+	Private btn As Button
+	count = count + 1
+	
+	btn = Sender
+	
+	Select count
+		Case 1
+			pnlKey1.Color = Colors.Red
+			temp = temp & btn.Tag
+			edtPWD.Text = temp
+		Case  2
+			pnlKey2.Color = Colors.Red
+			temp = temp & btn.Tag
+			edtPWD.Text = edtPWD.Text & btn.Tag
+		Case  3
+			pnlKey3.Color = Colors.Red
+			temp = temp & btn.Tag
+			edtPWD.Text = edtPWD.Text & btn.Tag
+		Case  4
+			pnlKey4.Color = Colors.Red
+			temp = temp & btn.Tag
+			edtPWD.Text = edtPWD.Text & btn.Tag
+			Sleep(500)
+			If temp = master Then
+				clearScreen
+				Activity.Finish
+				StartActivity(Me)
+			Else
+				attempt = attempt + 1
+				If attempt = 3 Then
+					Activity.Finish
+				Else
+					clearScreen
+				End If
+			End If
+	
+End Select
+End Sub
+
+Sub clearScreen()
+	pnlKey1.Color = Colors.White
+	pnlKey2.Color = Colors.White
+	pnlKey3.Color = Colors.White
+	pnlKey4.Color = Colors.White
+		edtPWD.Text = ""
+		temp = ""
+		count = 0
+End Sub
