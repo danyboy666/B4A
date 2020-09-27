@@ -1,0 +1,377 @@
+﻿Build1=Default,ca.android.basic.systools
+File1=androidgears.jpg
+File2=apk-icon-17.png
+File3=backgroundSwipeMenu.png
+File4=swipeMenu.png
+File5=sys.png
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+Group=Default Group
+IconFile=
+Library1=core
+Library2=phone
+Library3=runtimepermissions
+Library4=stringutils
+Library5=http
+Library6=httputils2
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="26"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.DarkTheme)~\n~AddPermission(android.permission.SHELL)~\n~AddPermission(android.permission.READ_LOGS)~\n~AddPermission(android.permission.INTERNET)~\n~AddPermission(android.permission.ACCESS_NETWORK_STATE)~\n~AddPermission(android.permission.ACCESS_WIFI_STATE)~\n~AddPermission(android.permission.CHANGE_WIFI_STATE)~\n~AddPermission(android.permission.INTERNET)~\n~AddPermission(android.permission.WAKE_LOCK)~\n~AddPermission(android.permission.PERMISSION_WRITE_EXTERNAL_STORAGE)~\n~AddPermission(android.permission.ACCESS_NETWORK_STATE) ~\n~AddPermission(android.permission.CHANGE_NETWORK_STATE)~\n~AddPermission(android.permission.ACCESS_SUPERUSER)~\n~AddPermission(android.permission.GET_ACCOUNTS)~\n~AddPermission(android.permission.WRITE_INTERNAL_STORAGE)~\n~~\n~AddPermission(android.permission.READ_GSERVICES)~\n~AddPermission(android.permission.MAPS_RECEIVE)~\n~AddPermission(android.permission.FOREGROUND_SERVICE)~\n~AddPermission(android.permission.SHELL)~\n~AddPermission(android.permission.RUN_SCRIPT)~\n~AddPermission(android.permission.SYSTEM_TOOLS)	~\n~AddPermission(android.permission.PREPEND_TO_PATH)		~\n~AddPermission(android.permission.ACCESS_SUPERUSER)~\n~AddPermission(android.permission.SIGNAL_PERSISTENT_PROCESSES)~\n~AddPermission(android.permission.CLEAR_APP_USER_DATA)~\n~AddPermission(android.permission.SET_ACTIVITY_WATCHER)  ~\n~AddPermission(android.permission.READ_CONTACTS)~\n~AddPermission(android.permission.READ_USER_DICTIONARY)~\n~      AddPermission(android.permission.GET_ACCOUNTS)~\n~      AddPermission(android.permission.WRITE_CONTACTS)~\n~      AddPermission(android.permission.BACKUP)~\n~      AddPermission(android.permission.READ_CALENDAR)~\n~      AddPermission(android.permission.MANAGE_USERS)~\n~      AddPermission(android.permission.SET_PREFERRED_APPLICATIONS)~\n~      AddPermission(android.permission.SET_SCREEN_COMPATIBILITY)~\n~      AddPermission(android.permission.INTERNAL_SYSTEM_WINDOW)~\n~      AddPermission(android.permission.INSTALL_PACKAGES)~\n~      AddPermission(android.permission.INJECT_EVENTS)~\n~      AddPermission(android.permission.GET_DETAILED_TASKS)~\n~      AddPermission(android.permission.SEND_SMS)~\n~      AddPermission(android.permission.WRITE_MEDIA_STORAGE)~\n~      AddPermission(android.permission.INTERACT_ACROSS_USERS_FULL)~\n~      AddPermission(android.permission.SET_ALWAYS_FINISH)~\n~      AddPermission(android.permission.KILL_BACKGROUND_PROCESSES)~\n~      AddPermission(android.permission.FORCE_STOP_PACKAGES)~\n~      AddPermission(android.permission.WRITE_CALENDAR)~\n~      AddPermission(android.permission.READ_INPUT_STATE)~\n~      AddPermission(android.permission.INSTALL_LOCATION_PROVIDER)~\n~      AddPermission(android.permission.EXPAND_STATUS_BAR)~\n~      AddPermission(android.permission.BLUETOOTH)~\n~      AddPermission(android.permission.WRITE_SETTINGS)~\n~      AddPermission(android.permission.ACCESS_SURFACE_FLINGER)~\n~      AddPermission(android.permission.DEVICE_POWER)~\n~      AddPermission(android.permission.CHANGE_CONFIGURATION)~\n~    ~\n~      AddPermission(android.permission.DELETE_PACKAGES)~\n~      AddPermission(android.permission.GET_TASKS)~\n~    ~\n~      AddPermission(android.permission.ACCESS_WIFI_STATE)~\n~      AddPermission(android.permission.STOP_APP_SWITCHES)~\n~      AddPermission(android.permission.BROADCAST_STICKY)~\n~      AddPermission(android.permission.GRANT_REVOKE_PERMISSIONS)~\n~      AddPermission(android.permission.WRITE_USER_DICTIONARY)~\n~      AddPermission(android.permission.READ_FRAME_BUFFER)~\n~      AddPermission(android.permission.SET_KEYBOARD_LAYOUT)~\n~      AddPermission(android.permission.FORCE_BACK)~\n~      AddPermission(android.permission.BLUETOOTH_STACK)~\n~      AddPermission(android.permission.SET_ANIMATION_SCALE)~\n~      AddPermission(android.permission.SET_ORIENTATION)~\n~      AddPermission(android.permission.SET_DEBUG_APP)~\n~      AddPermission(android.permission.DELETE_CACHE_FILES)~\n~      AddPermission(android.permission.BATTERY_STATS)~\n~      AddPermission(android.permission.REORDER_TASKS)~\n~      AddPermission(android.permission.ACCESS_CONTENT_PROVIDERS_EXTERNALLY)~\n~      AddPermission(android.permission.SET_PROCESS_LIMIT)~\n~      AddPermission(android.permission.INTERACT_ACROSS_USERS)~\n~      AddPermission(android.permission.RETRIEVE_WINDOW_CONTENT)     ~\n~AddPermission(android.permission.ACCESS_CHECKIN_PROPERTIES)                 ' Allows read/write access to the "properties" table in the checkin database, to change values that get uploaded.~\n~AddPermission(android.permission.ACCESS_COARSE_LOCATION)                    ' Allows an app to access approximate location derived from network location sources such as cell towers and Wi-Fi.~\n~AddPermission(android.permission.ACCESS_FINE_LOCATION)                      ' Allows an app to access precise location from location sources such as GPS, cell towers, and Wi-Fi.~\n~AddPermission(android.permission.ACCESS_LOCATION_EXTRA_COMMANDS)            ' Allows an application to access extra location provider commands.~\n~AddPermission(android.permission.ACCESS_MOCK_LOCATION)                      ' Allows an application to create mock location providers for testing.~\n~AddPermission(android.permission.ACCESS_NETWORK_STATE)                      ' Allows applications to access information about networks.~\n~AddPermission(android.permission.ACCESS_SURFACE_FLINGER)                    ' Allows an application to use SurfaceFlinger's low level features.~\n~AddPermission(android.permission.ACCESS_WIFI_STATE)                         ' Allows applications to access information about Wi-Fi networks.~\n~AddPermission(android.permission.ACCOUNT_MANAGER)                           ' Allows applications to call into AccountAuthenticators.~\n~AddPermission(android.permission.ADD_VOICEMAIL)                             ' Allows an application to add voicemails into the system.~\n~AddPermission(android.permission.AUTHENTICATE_ACCOUNTS)                     ' Allows an application to act as an AccountAuthenticator for the AccountManager.~\n~AddPermission(android.permission.BATTERY_STATS)                             ' Allows an application to collect battery statistics.~\n~AddPermission(android.permission.BIND_ACCESSIBILITY_SERVICE)                ' Must be required by an AccessibilityService, to ensure that only the system can bind to it.~\n~AddPermission(android.permission.BIND_APPWIDGET)                            ' Allows an application to tell the AppWidget service which application can access AppWidget's data.~\n~AddPermission(android.permission.BIND_DEVICE_ADMIN)                         ' Must be required by device administration receiver, to ensure that only the system can interact with it.~\n~AddPermission(android.permission.BIND_INPUT_METHOD)                         ' Must be required by an InputMethodService, to ensure that only the system can bind to it.~\n~AddPermission(android.permission.BIND_NFC_SERVICE)                          ' Must be required by a HostApduService or OffHostApduService to ensure that only the system can bind to it.~\n~AddPermission(android.permission.BIND_NOTIFICATION_LISTENER_SERVICE)        ' Must be required by an NotificationListenerService, to ensure that only the system can bind to it.~\n~AddPermission(android.permission.BIND_PRINT_SERVICE)                        ' Must be required by a PrintService, to ensure that only the system can bind to it.~\n~AddPermission(android.permission.BIND_REMOTEVIEWS)                          ' Must be required by a RemoteViewsService, to ensure that only the system can bind to it.~\n~AddPermission(android.permission.BIND_TEXT_SERVICE)                         ' Must be required by a TextService (e.g.~\n~AddPermission(android.permission.BIND_VPN_SERVICE)                          ' Must be required by a VpnService, to ensure that only the system can bind to it.~\n~AddPermission(android.permission.BIND_WALLPAPER)                            ' Must be required by a WallpaperService, to ensure that only the system can bind to it.~\n~AddPermission(android.permission.BLUETOOTH)                                 ' Allows applications to connect to paired bluetooth devices.~\n~AddPermission(android.permission.BLUETOOTH_ADMIN)                           ' Allows applications to discover and pair bluetooth devices.~\n~AddPermission(android.permission.BLUETOOTH_PRIVILEGED)                      ' Allows applications to pair bluetooth devices without user interaction.~\n~AddPermission(android.permission.BRICK)                                     ' Required to be able to disable the device (very dangerous!).~\n~AddPermission(android.permission.BROADCAST_PACKAGE_REMOVED)                 ' Allows an application to broadcast a notification that an application package has been removed.~\n~AddPermission(android.permission.BROADCAST_SMS)                             ' Allows an application to broadcast an SMS receipt notification.~\n~AddPermission(android.permission.BROADCAST_STICKY)                          ' Allows an application to broadcast sticky intents.~\n~AddPermission(android.permission.BROADCAST_WAP_PUSH)                        ' Allows an application to broadcast a WAP PUSH receipt notification.~\n~AddPermission(android.permission.CALL_PHONE)                                ' Allows an application to initiate a phone call without going through the Dialer user interface for the user to confirm the call being placed.~\n~AddPermission(android.permission.CALL_PRIVILEGED)                           ' Allows an application to call any phone number, including emergency numbers, without going through the Dialer user interface for the user to confirm the call being placed.~\n~AddPermission(android.permission.CAMERA)                                    ' Required to be able to access the camera device.~\n~AddPermission(android.permission.CAPTURE_AUDIO_OUTPUT)                      ' Allows an application to capture audio output.~\n~AddPermission(android.permission.CAPTURE_SECURE_VIDEO_OUTPUT)               ' Allows an application to capture secure video output.~\n~AddPermission(android.permission.CAPTURE_VIDEO_OUTPUT)                      ' Allows an application to capture video output.~\n~AddPermission(android.permission.CHANGE_COMPONENT_ENABLED_STATE)            ' Allows an application to change whether an application component (other than its own) is enabled or not.~\n~AddPermission(android.permission.CHANGE_CONFIGURATION)                      ' Allows an application to modify the current configuration, such as locale.~\n~AddPermission(android.permission.CHANGE_NETWORK_STATE)                      ' Allows applications to change network connectivity state.~\n~AddPermission(android.permission.CHANGE_WIFI_MULTICAST_STATE)               ' Allows applications to enter Wi-Fi Multicast mode.~\n~AddPermission(android.permission.CHANGE_WIFI_STATE)                         ' Allows applications to change Wi-Fi connectivity state.~\n~AddPermission(android.permission.CLEAR_APP_CACHE)                           ' Allows an application to clear the caches of all installed applications on the device.~\n~AddPermission(android.permission.CLEAR_APP_USER_DATA)                       ' Allows an application to clear user data.~\n~AddPermission(android.permission.CONTROL_LOCATION_UPDATES)                  ' Allows enabling/disabling location update notifications from the radio.~\n~AddPermission(android.permission.DELETE_CACHE_FILES)                        ' Allows an application to delete cache files.~\n~AddPermission(android.permission.DELETE_PACKAGES)                           ' Allows an application to delete packages.~\n~AddPermission(android.permission.DEVICE_POWER)                              ' Allows low-level access to power management.~\n~AddPermission(android.permission.DIAGNOSTIC)                                ' Allows applications to RW to diagnostic resources.~\n~AddPermission(android.permission.DISABLE_KEYGUARD)                          ' Allows applications to disable the keyguard.~\n~AddPermission(android.permission.DUMP)                                      ' Allows an application to retrieve state dump information from system services.~\n~AddPermission(android.permission.EXPAND_STATUS_BAR)                         ' Allows an application to expand or collapse the status bar.~\n~AddPermission(android.permission.FACTORY_TEST)                              ' Run as a manufacturer test application, running as the root user.~\n~AddPermission(android.permission.FLASHLIGHT)                                ' Allows access to the flashlight.~\n~AddPermission(android.permission.FORCE_BACK)                                ' Allows an application to force a BACK operation on whatever is the top activity.~\n~AddPermission(android.permission.GET_ACCOUNTS)                              ' Allows access to the list of accounts in the Accounts Service.~\n~AddPermission(android.permission.GET_PACKAGE_SIZE)                          ' Allows an application to find out the space used by any package.~\n~AddPermission(android.permission.GET_TASKS)                                 ' Allows an application to get information about the currently or recently running tasks.~\n~AddPermission(android.permission.GET_TOP_ACTIVITY_INFO)                     ' Allows an application to retrieve private information about the current top activity, such as any assist context it can provide.~\n~AddPermission(android.permission.GLOBAL_SEARCH)                             ' This permission can be used on content providers to allow the global search system to access their data.~\n~AddPermission(android.permission.HARDWARE_TEST)                             ' Allows access to hardware peripherals.~\n~AddPermission(android.permission.INJECT_EVENTS)                             ' Allows an application to inject user events (keys, touch, trackball) into the event stream and deliver them to ANY window.~\n~AddPermission(android.permission.INSTALL_LOCATION_PROVIDER)                 ' Allows an application to install a location provider into the Location Manager.~\n~AddPermission(android.permission.INSTALL_PACKAGES)                          ' Allows an application to install packages.~\n~AddPermission(android.permission.INSTALL_SHORTCUT)                          ' Allows an application to install a shortcut in Launcher.~\n~AddPermission(android.permission.INTERNAL_SYSTEM_WINDOW)                    ' Allows an application to open windows that are for use by parts of the system user interface.~\n~AddPermission(android.permission.INTERNET)                                  ' Allows applications to open network sockets.~\n~AddPermission(android.permission.KILL_BACKGROUND_PROCESSES)                 ' Allows an application to call killBackgroundProcesses(String).~\n~AddPermission(android.permission.LOCATION_HARDWARE)                         ' Allows an application to use location features in hardware, such as the geofencing api.~\n~AddPermission(android.permission.MANAGE_ACCOUNTS)                           ' Allows an application to manage the list of accounts in the AccountManager.~\n~AddPermission(android.permission.MANAGE_APP_TOKENS)                         ' Allows an application to manage (create, destroy, Z-order) application tokens in the window manager.~\n~AddPermission(android.permission.MANAGE_DOCUMENTS)                          ' Allows an application to manage access to documents, usually as part of a document picker.~\n~AddPermission(android.permission.MASTER_CLEAR)                              ' Not for use by third-party applications.~\n~AddPermission(android.permission.MEDIA_CONTENT_CONTROL)                     ' Allows an application to know what content is playing and control its playback.~\n~AddPermission(android.permission.MODIFY_AUDIO_SETTINGS)                     ' Allows an application to modify global audio settings.~\n~AddPermission(android.permission.MODIFY_PHONE_STATE)                        ' Allows modification of the telephony state - power on, mmi, etc.~\n~AddPermission(android.permission.MOUNT_FORMAT_FILESYSTEMS)                  ' Allows formatting file systems for removable storage.~\n~AddPermission(android.permission.MOUNT_UNMOUNT_FILESYSTEMS)                 ' Allows mounting and unmounting file systems for removable storage.~\n~AddPermission(android.permission.NFC)                                       ' Allows applications to perform I/O operations over NFC.~\n~AddPermission(android.permission.PERSISTENT_ACTIVITY)                       ' This constant was deprecated in API level 9. This functionality will be removed in the future; please do not use. Allow an application to make its activities persistent.~\n~AddPermission(android.permission.PROCESS_OUTGOING_CALLS)                    ' Allows an application to see the number being dialed during an outgoing call with the option to redirect the call to a different number or abort the call altogether.~\n~AddPermission(android.permission.READ_CALENDAR)                             ' Allows an application to read the user's calendar data.~\n~AddPermission(android.permission.READ_CALL_LOG)                             ' Allows an application to read the user's call log.~\n~AddPermission(android.permission.READ_CONTACTS)                             ' Allows an application to read the user's contacts data.~\n~AddPermission(android.permission.READ_EXTERNAL_STORAGE)                     ' Allows an application to read from external storage.~\n~AddPermission(android.permission.READ_INTERNAL_STORAGE) ~\n~AddPermission(android.permission.READ_FRAME_BUFFER)                         ' Allows an application to take screen shots and more generally get access to the frame buffer data.~\n~AddPermission(android.permission.READ_HISTORY_BOOKMARKS)                    ' Allows an application to read (but not write) the user's browsing history and bookmarks.~\n~AddPermission(android.permission.READ_INPUT_STATE)                          ' This constant was deprecated in API level 16. The API that used this permission has been removed.~\n~AddPermission(android.permission.READ_LOGS)                                 ' Allows an application to read the low-level system log files.~\n~AddPermission(android.permission.READ_PHONE_STATE)                          ' Allows read only access to phone state.~\n~AddPermission(android.permission.READ_PROFILE)                              ' Allows an application to read the user's personal profile data.~\n~AddPermission(android.permission.READ_SMS)                                  ' Allows an application to read SMS messages.~\n~AddPermission(android.permission.READ_SOCIAL_STREAM)                        ' Allows an application to read from the user's social stream.~\n~AddPermission(android.permission.READ_SYNC_SETTINGS)                        ' Allows applications to read the sync settings.~\n~AddPermission(android.permission.READ_SYNC_STATS)                           ' Allows applications to read the sync stats.~\n~AddPermission(android.permission.READ_USER_DICTIONARY)                      ' Allows an application to read the user dictionary.~\n~AddPermission(android.permission.REBOOT)                                    ' Required to be able to reboot the device.~\n~AddPermission(android.permission.RECEIVE_BOOT_COMPLETED)                    ' Allows an application to receive the ACTION_BOOT_COMPLETED that is broadcast after the system finishes booting.~\n~AddPermission(android.permission.RECEIVE_MMS)                               ' Allows an application to monitor incoming MMS messages, to record or perform processing on them.~\n~AddPermission(android.permission.RECEIVE_SMS)                               ' Allows an application to monitor incoming SMS messages, to record or perform processing on them.~\n~AddPermission(android.permission.RECEIVE_WAP_PUSH)                          ' Allows an application to monitor incoming WAP push messages.~\n~AddPermission(android.permission.RECORD_AUDIO)                              ' Allows an application to record audio.~\n~AddPermission(android.permission.REORDER_TASKS)                             ' Allows an application to change the Z-order of tasks.~\n~AddPermission(android.permission.RESTART_PACKAGES)                          ' This constant was deprecated in API level 8. The restartPackage(String) API is no longer supported.~\n~AddPermission(android.permission.SEND_RESPOND_VIA_MESSAGE)                  ' Allows an application (Phone) to send a request to other applications to handle the respond-via-message action during incoming calls.~\n~AddPermission(android.permission.SEND_SMS)                                  ' Allows an application to send SMS messages.~\n~AddPermission(android.permission.SET_ACTIVITY_WATCHER)                      ' Allows an application to watch and control how activities are started globally in the system.~\n~AddPermission(android.permission.SET_ALARM)                                 ' Allows an application to broadcast an Intent to set an alarm for the user.~\n~AddPermission(android.permission.SET_ALWAYS_FINISH)                         ' Allows an application to control whether activities are immediately finished when put in the background.~\n~AddPermission(android.permission.SET_ANIMATION_SCALE)                       ' Modify the global animation scaling factor.~\n~AddPermission(android.permission.SET_DEBUG_APP)                             ' Configure an application for debugging.~\n~AddPermission(android.permission.SET_ORIENTATION)                           ' Allows low-level access to setting the orientation (actually rotation) of the screen.~\n~AddPermission(android.permission.SET_POINTER_SPEED)                         ' Allows low-level access to setting the pointer speed.~\n~AddPermission(android.permission.SET_PREFERRED_APPLICATIONS)                ' This constant was deprecated in API level 7. No longer useful, see addPackageToPreferred(String) for details.~\n~AddPermission(android.permission.SET_PROCESS_LIMIT)                         ' Allows an application to set the maximum number of (not needed) application processes that can be running.~\n~AddPermission(android.permission.SET_TIME)                                  ' Allows applications to set the system time.~\n~AddPermission(android.permission.SET_TIME_ZONE)                             ' Allows applications to set the system time zone.~\n~AddPermission(android.permission.SET_WALLPAPER)                             ' Allows applications to set the wallpaper.~\n~AddPermission(android.permission.SET_WALLPAPER_HINTS)                       ' Allows applications to set the wallpaper hints.~\n~AddPermission(android.permission.SIGNAL_PERSISTENT_PROCESSES)               ' Allow an application to request that a signal be sent to all persistent processes.~\n~AddPermission(android.permission.STATUS_BAR)                                ' Allows an application to open, close, or disable the status bar and its icons.~\n~AddPermission(android.permission.SUBSCRIBED_FEEDS_READ)                     ' Allows an application to allow read access the subscribed feeds ContentProvider.~\n~AddPermission(android.permission.SUBSCRIBED_FEEDS_WRITE)                    ' Allows an application to allow write access the subscribed feeds ContentProvider.~\n~AddPermission(android.permission.SYSTEM_ALERT_WINDOW)                       ' Allows an application to open windows using the type TYPE_SYSTEM_ALERT, shown on top of all other applications.~\n~AddPermission(android.permission.TRANSMIT_IR_ALLOWS)                        ' Allows using the device's IR transmitter, if available.~\n~AddPermission(android.permission.UNINSTALL_SHORTCUT)                        ' Allows an application to uninstall a shortcut in Launcher.~\n~AddPermission(android.permission.UPDATE_DEVICE_STATS)                       ' Allows an application to update device statistics.~\n~AddPermission(android.permission.USE_CREDENTIALS)                           ' Allows an application to request authtokens from the AccountManager.~\n~AddPermission(android.permission.USE_SIP)                                   ' Allows an application to use SIP service.~\n~AddPermission(android.permission.VIBRATE)                                   ' Allows access to the vibrator.~\n~AddPermission(android.permission.WAKE_LOCK)                                 ' Allows using PowerManager WakeLocks to keep processor from sleeping or screen from dimming.~\n~AddPermission(android.permission.WRITE_APN_SETTINGS)                        ' Allows applications to write the apn settings.~\n~AddPermission(android.permission.WRITE_CALENDAR)                            ' Allows an application to write (but not read) the user's calendar data.~\n~AddPermission(android.permission.WRITE_CALL_LOG)                            ' Allows an application to write (but not read) the user's contacts data.~\n~AddPermission(android.permission.WRITE_CONTACTS)                            ' Allows an application to write (but not read) the user's contacts data.~\n~AddPermission(android.permission.WRITE_EXTERNAL_STORAGE)                    ' Allows an application to write to external storage.~\n~AddPermission(android.permission.WRITE_INTERNAL_STORAGE)  ~\n~AddPermission(android.permission.WRITE_GSERVICES)                           ' Allows an application to modify the Google service map.~\n~AddPermission(android.permission.WRITE_HISTORY_BOOKMARKS)                   ' Allows an application to write (but not read) the user's browsing history and bookmarks.~\n~AddPermission(android.permission.WRITE_PROFILE)                             ' Allows an application to write (but not read) the user's personal profile data.~\n~AddPermission(android.permission.WRITE_SECURE_SETTINGS)                     ' Allows an application to read or write the secure system settings.~\n~AddPermission(android.permission.WRITE_SETTINGS)                            ' Allows an application to read or write the system settings.~\n~AddPermission(android.permission.WRITE_SMS)                                 ' Allows an application to write SMS messages.~\n~AddPermission(android.permission.WRITE_SOCIAL_STREAM)                       ' Allows an application to write (but not read) the user's social stream data.~\n~AddPermission(android.permission.WRITE_SYNC_SETTINGS)                       ' Allows applications to write the sync settings.~\n~AddPermission(android.permission.WRITE_USER_DICTIONARY)                     ' Allows an application to write to the user dictionary.~\n~AddPermission(android.permission.TRANSMIT_IR_ALLOWS)~\n~SetActivityAttribute(showinfo, android:screenOrientation, "unspecified")~\n~~\n~'End of default text.~\n~
+Module1=swipeDetection
+Module2=showinfo
+Module3=listpackages
+Module4=libs
+NumberOfFiles=5
+NumberOfLibraries=6
+NumberOfModules=4
+Version=8.3
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: db's SysTools
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Public passCMD As String 'store local module commands in a public variable
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+	'Main activity views
+	Private lvApps As ListView	 'Container for the apps 	
+	Private pnlMain As Panel
+	Private rp As RuntimePermissions
+	Private baseCommand As String
+	Private helpFlag As Boolean		
+End Sub
+
+' Create activity
+' Check if FirtsTime else will pass the progress bar animation. Once the progress bar is loaded the activity then is paused and send the user to 
+' a swipe detection module which will return which sub fonction the user want to execute.
+Sub Activity_Create(FirstTime As Boolean)
+	If FirstTime = True Then
+		Private pb As ProgressBar
+'		rp.CheckAndRequest(rp.PERMISSION_WRITE_EXTERNAL_STORAGE) 'debug
+		rp.GetSafeDirDefaultExternal(rp.PERMISSION_WRITE_EXTERNAL_STORAGE)' Request permissions for external storage
+		'-----------------------------------------------------------Progess bar stuff
+		Activity.Initialize(Me)	
+		Activity.Title = "Loading Magic App"
+		pb.Initialize("pb") 'initialize progress bar
+		pb.SetColorAnimated(5000, Colors.ARGB(0,255,255,254), Colors.ARGB(255,0,0,0))
+		Activity.AddView(pb,0%x,0%y,100%x,100%y)
+		ToastMessageShow("Magic 8 Ball is loading, please wait a moment",True)
+		
+		For x = 0 To 5000
+			x = x + 1		
+			Sleep(1) ' Do something!!
+			pb.Progress = x
+		Next	
+		Activity.removeAllViews() 'remove progress bar view		
+		StartActivity("swipeDetection") 'start swipe detect activity module
+	Else 
+		StartActivity("swipeDetection") 'if we have already loaded the activity once the progress bar block is skiped and we send the user back to the swipe detect module
+	End If
+End Sub
+
+' This block is executed whenever we return from another activity. 
+' In this case we want to give the user the menu he chose back in swipe module
+Sub Activity_Resume
+	selectApp
+End Sub
+
+' Transfert variable we got from swipe module and 
+' call app loader block
+Sub selectApp()		
+	If swipeDetection.getApp <> "" Then
+		loadMainLayout	
+	Else
+		swipeDetection.getApp = ""	' catch eventual errors here
+	End If
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+	If UserClosed = True Then
+		StartActivity("main")
+	End If
+End Sub
+
+' capture back key press so we can warn user before leaving the program
+Sub Activity_KeyPress (KeyCode As Int) As Boolean 'Return True to consume the event
+	Private Selection As Short
+	
+	If KeyCode = KeyCodes.KEYCODE_BACK Then		
+		Selection = Msgbox2("Go to main menu?".ToUpperCase, "C o n f i r m a t i o n", "Yes", "", "", Null)		
+		Select Selection
+			Case DialogResponse.POSITIVE	'
+				Return False
+			Case DialogResponse.CANCEL, DialogResponse.NEGATIVE		
+				Return True				
+		End Select		
+	End If	
+End Sub
+
+Sub Activity_LongClick
+	selectApp	
+End Sub
+
+' Main layout block
+' This block will load the background image, list views containing out apps etc.
+
+Sub loadMainLayout()
+	
+	Private Gradient1 As GradientDrawable
+	Private Clrs(2) As Int
+	
+	Clrs(0) = Colors.RGB(28,28,28) 'define gradiant values for activity background
+	Clrs(1) = Colors.RGB(127,127,127)
+
+	Activity.Title = "Apps Menu" 'Activity title
+	Activity.Initialize(Me) 'Initialize main activity		
+	Gradient1.Initialize("LEFT_RIGHT", Clrs)
+	lvApps.Initialize("lvApps") 'Initialize listview container for apps
+	Activity.Background = Gradient1
+	pnlMain.Initialize("pnlMain") 'Panel wich hold out item list
+	pnlMain.SetBackgroundImage(LoadBitmap(File.DirAssets, "androidgears.jpg")) 'Set background image
+	Activity.AddView(pnlMain,0%x,0%y,100%x,100%y) 'Panel location		
+	pnlMain.AddView(lvApps,50%x,50%y,100%x,100%y) 'Add the main panel and set the view size of lvApps
+	lvApps.SetLayoutAnimated(1000,0%x,0%y,100%x,100%y) 'Set the animation layout parameters of lvApps
+	lvApps.TwoLinesAndBitmap.Label.Top = 0
+	lvApps.TwoLinesAndBitmap.Label.Height = 8%y
+	lvApps.TwoLinesAndBitmap.Label.Left = 20%x
+	lvApps.TwoLinesAndBitmap.Label.TextSize = 20
+	lvApps.TwoLinesAndBitmap.SecondLabel.TextSize = 14
+	lvApps.TwoLinesAndBitmap.SecondLabel.Left = 20%x
+	lvApps.TwoLinesAndBitmap.SecondLabel.top = 8%y
+	lvApps.TwoLinesAndBitmap.SecondLabel.Height = 8%y
+	lvApps.TwoLinesAndBitmap.Label.TextColor = Colors.RGB(255,255,255) 'First line
+	lvApps.TwoLinesAndBitmap.SecondLabel.TextColor = Colors.RGB(255,255,255) 'Second text line color define
+	'define bitmap image property for apps container
+	lvApps.TwoLinesAndBitmap.ImageView.top = 2%y
+	lvApps.TwoLinesAndBitmap.ImageView.Height = 10%y
+	lvApps.TwoLinesAndBitmap.ImageView.Width = 15%x
+	lvApps.TwoLinesAndBitmap.ItemHeight = 25%x 'This will affect the spacing between listed items in lv
+	appLoader ' Call application loader block with the variable we got from swipe menu
+End Sub
+
+' ================================================================= Sub functions blocks =========================================================
+'
+' These subs will populate the listview container for apps.
+' Depending on which direction was entered by the user we got from swipe module.
+' They all 
+
+' --------------------------------------------- 
+
+'Applications loader block	
+' This load the right application requested by the user depending on the string we got back from swipe detect
+'
+Sub appLoader		
+	Private aList,aDesc As List 'Declare list containers for our text and apps arrays
+	Private appsDesc() As String 'Array container	
+	Private appString = "app", infoText = "Hold for info about " As String
+	Private lvAppList() As String 'array container
+	Private appList() As String 'array container
+	Private arrayLenght As Byte
+	arrayLenght = 6	
+	Private appsNames(arrayLenght) As String 'Array container
+		
+	Activity.Title = "Application loader"
+	aList = lvAppList
+
+	Select swipeDetection.getApp
+		Case "appFileSystem"		
+			appList = Array As String("Disk Free", "Mount", "Environment variables", "Disk Free storage", "Enter CMD","Package Manager")
+		Case "appIPTools"	
+			appList = Array As String("Ping google", "IP info", "Route", "Netstat", "IP info all", "Placeholder") 'array elements
+		Case "appSysTools"			
+			appList = Array As String("Uptime", "Process", "CPU info", "Memory info", "Display running services", "Linux Kernel info") 'array elements
+		Case "appInternalTools"			
+			appList = Array As String("Get Weather", "Global device info", "List shell Commands", "Get Android system property","Reboot device","Shutdown device") 'array elements
+	End Select
+
+	appsDesc = Array As String(infoText & appList(0),infoText & appList(1),infoText & appList(2),infoText & appList(3),infoText & appList(4),infoText & appList(5))
+	aDesc = appsDesc
+	lvAppList = appList
+	
+	For i = 0 To appList.Length - 1
+		appsNames(i) = appString & (i + 1)
+		appsNames(i) = lvAppList(i)
+		lvApps.AddTwoLinesAndBitmap(appsNames(i), aDesc.Get(i), LoadBitmap(File.DirAssets, "sys.png"))		
+
+	Next
+
+End Sub
+
+' ================================================================= Sub functions blocks end =====================================================
+
+'load whatever item we called before
+' apploader will output hthe sent commands whaterver item was selected previously
+Sub lvApps_ItemClick (Position As Int, Value As Object)	
+	ProgressDialogShow2("Loading " & Value & CRLF & "" & CRLF & "Please wait",False)
+	Sleep(2000)	
+	
+	Select Value
+		Case "Package Manager"
+			StartActivity("listpackages")
+		Case Else 
+			passCMD = assembleCMD(Value)				
+			StartActivity("showinfo")
+	End Select	
+End Sub
+
+'help block
+'item long click do something
+' apploader will output help commands whaterver item was slected previously
+Sub lvApps_ItemLongClick (Position As Int, Value As Object)		
+		
+	Activity.Title = Value		
+
+	helpFlag = True
+	passCMD = assembleCMD(Value)
+			Select Value
+				Case "Package Manager"
+					Msgbox2Async("This is the system built-in package manager. This function will list all packages installed on this device.", Value &" manual", "", "Cancel", "", Null, False)
+				Case "CPU info"
+					Msgbox2Async("This function will output cpu info", Value &" manual", "", "Cancel", "", Null, False)
+				Case "Enter CMD"
+					Msgbox2Async("This function will accept input from user via android keyboard", Value &" manual", "", "Cancel", "", Null, False)
+				Case "Get Weather"
+					Msgbox2Async("This function will get the weather forecast for Rimouski", Value &" manual", "", "Cancel", "", Null, False)
+				Case "Memory info"
+					Msgbox2Async("This function will output memory usage info", Value &" manual", "", "Cancel", "", Null, False)
+				Case "Global device info"
+					Msgbox2Async("This function will output Global device info", Value &" manual", "", "Cancel", "", Null, False)
+				Case "List shell Commands"
+					Msgbox2Async("This function will list all available shell commands", Value &" manual", "", "Cancel", "", Null, False)
+				Case "Placeholder"
+					ToastMessageShow("Cannot pass empty command. Returning to main",True)
+					Sleep(1000)
+					Activity.Finish
+					'StartActivity("swipeDetection") 'start swipe detect activity module
+				Case Else
+					Msgbox2Async(libs.sendToShell(passCMD), Value &" manual", "", "Cancel", "", Null, False)
+			End Select
+End Sub
+
+Sub assembleCMD(Value As Object) As String
+	
+	Activity.Title = Value			
+	Private cmdArg, helpCMDArg As String
+	Private sendCurrentCMD As String
+	
+	Select Value
+
+		Case "Enter CMD"
+			baseCommand = "enterCMD"
+			cmdArg = ""
+		Case "Get Weather"
+			baseCommand = "getWeather"
+			cmdArg = ""
+		Case "CPU info"
+			baseCommand = "cat /proc/cpuinfo"
+			cmdArg = ""
+		Case "Memory info"
+			baseCommand = "cat"
+			cmdArg = " /proc/meminfo"			
+		Case "Global device info"
+			baseCommand = "devInfo"
+			cmdArg = ""
+		Case "Package Manager"
+			baseCommand = "packageManager"
+		Case "Ping google"
+			baseCommand = "ping"
+			cmdArg = " -c5 google.ca"
+			helpCMDArg = " -h"
+		Case "Disk Free"
+			baseCommand = "df"
+			cmdArg = " -h"
+			helpCMDArg = " --help"
+		Case "Mount"
+			baseCommand = "mount"
+			cmdArg = ""
+			helpCMDArg = " --help"
+		Case "Display running services"
+'			baseCommand = "dumpstate"
+			baseCommand = "dumpsys"
+			cmdArg = " -l"
+			helpCMDArg = " -h"
+		Case "Reboot device"
+			baseCommand = "reboot"
+			cmdArg = ""
+			helpCMDArg = " -h"
+		Case "Shutdown device"
+			baseCommand = "reboot"
+			cmdArg = " -p"
+			helpCMDArg = " -h"
+		Case "Uptime"
+			baseCommand = "uptime"
+			cmdArg = ""
+			helpCMDArg = " --help"
+		Case "Process"
+			baseCommand = "ps"
+			cmdArg = ""
+			helpCMDArg = " --help"
+		Case "Get Android system property"
+			baseCommand = "getprop"
+			cmdArg = ""
+			helpCMDArg = " --help"
+		Case "Linux Kernel info"
+			baseCommand = "uname"
+			cmdArg = " -a"
+			helpCMDArg = " --help"
+		Case "List shell Commands"
+			baseCommand = "ls"
+			cmdArg = " -1 /system/bin"
+'			helpCMDArg = ""
+		Case "Environment variables"
+			baseCommand = "printenv"
+			cmdArg = ""
+			helpCMDArg = " --help"
+		Case "Route" 
+			baseCommand = "ip"
+			cmdArg = " route"
+			helpCMDArg = " help"
+		Case "IP info"
+			baseCommand = "ip"
+			cmdArg = " addr show wlan0"
+			helpCMDArg = " addr help"
+		Case "Netstat"
+			baseCommand = "netstat"
+			cmdArg = " -r -n"
+			helpCMDArg = " --help"
+		Case "IP info all"
+			baseCommand = "ip"
+			cmdArg = " addr show"
+			helpCMDArg = " addr help"			
+		Case "Disk Free storage"
+			baseCommand = "df"
+			cmdArg = " -h /storage"
+			helpCMDArg = " --help"
+		Case Else "Placeholder"
+			baseCommand = ""
+			helpCMDArg = ""
+	End Select	
+	
+	If helpFlag = True Then
+		sendCurrentCMD = baseCommand&helpCMDArg
+	Else if cmdArg = "" And helpCMDArg = "" Then
+		sendCurrentCMD = baseCommand
+	Else	
+		sendCurrentCMD = baseCommand&cmdArg
+	End If	
+	
+	helpFlag = False	
+	Return sendCurrentCMD
+End Sub
