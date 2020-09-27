@@ -1,0 +1,148 @@
+﻿Build1=Default,b4a.Magic8Ball
+File1=21312099.png
+File2=8ballBng_landscape.png
+File3=8ballBng_portrait.png
+File4=break.mp3
+File5=Layout1.bal
+File6=test.jpg
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+Group=Default Group
+IconFile=
+Library1=core
+Library2=phone
+Library3=audio
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="26"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'SetActivityAttribute(Main, android:theme, @android:style/Theme.Translucent.NoTitleBar)~\n~CreateResourceFromFile(Macro, Themes.DarkTheme)~\n~~\n~'End of default text.~\n~
+Module1=Starter
+Module2=Shake
+NumberOfFiles=6
+NumberOfLibraries=3
+NumberOfModules=2
+Version=8.3
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: Magic 8-Ball
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+	#BridgeLogger: True
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: true
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	Dim sensor As PhoneSensors
+	Dim sounds As SoundPool
+	Dim bounceId As Int
+	Private i = 0 , j = 0,  k = 0, x = 0 As Int
+End Sub
+
+Sub Globals
+
+	Private Label1 As Label
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	i = i  + 1
+	j = j  + 1
+	k = k  + 1
+	x = x + 1
+	
+	If FirstTime Then
+		sensor.Initialize(sensor.TYPE_ACCELEROMETER)
+		Shake.CallBackActivity = "Main" 'Set the activity that handles the Shake event
+		sounds.Initialize(1)
+		Label1.Initialize(1)
+		Label1.Gravity = Gravity.CENTER
+		Label1.TextSize = 25
+		'Activity.color = Bit.Or (Bit.And(0x00ffffff, Activity.color)), (Bit.ShiftLeft(255, 24))
+		'Activity.Color = Colors.Transparent
+		'Activity.Color = Colors.RGB(Rnd(0, 255), Rnd(0, 255), Rnd(0, 255))
+		'Activity.Color = Colors.RGB(150,150,150)
+		'Activity.Color = Colors.RGB(Rnd(0, 255), Rnd(0, 255), Rnd(0, 255))
+		Activity.SetBackgroundImage(LoadBitmap(File.DirAssets, "8ballBng_portrait.png"))
+		
+		'Activity.AddView(Label1,145dip, 215dip,20%x,30%y)
+		Activity.AddView(Label1,38%x,33%y,25%x,30%y)
+		bounceId = sounds.Load(File.DirAssets, "break.mp3")
+		Label1.Text = "Poses ta question"
+	End If
+End Sub
+
+Sub Activity_Resume
+	sensor.StartListening("sensor")
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+	sensor.StopListening
+End Sub
+
+'Delegate the event handling to the Shake module
+Sub sensor_SensorChanged (Values() As Float)
+	Shake.HandleSensorEvent(Values)
+End Sub
+
+'This event is raised when a shake is detected
+Sub ShakeEvent
+	
+	Private RepEvasives() As String
+	Private RepAffirmatives() As String
+	Private RepNegatives() As String
+	Private RepStr() As String
+	
+	
+	
+	RepEvasives = Array As String("Essaye plus tard", "Essaye encore", "Pas d'avis", "C'est ton destin", "Le sort en est jeté", "Une chance sur deux", "Repose ta question")
+	RepAffirmatives = Array As String("D'après moi oui", "C'est certain", "Oui absolument", "Tu peux compter dessus", "Sans aucun doute", "Très probable", "Oui", "C'est bien parti")
+	RepNegatives = Array As String("C'est non", "Peu probable", "Faut pas rêver", "N'y compte pas", "Impossible")
+	
+	i = Rnd(1,5)
+	j = Rnd(1,8)
+	k = Rnd(1,7)
+	x = Rnd(1,3)
+						
+	RepStr = Array As String(RepNegatives(i), RepAffirmatives(j), RepEvasives(k))
+					
+	Log(RepStr(x))	
+	Label1.Text = RepStr(x)
+	'Activity.Color = Colors.RGB(Rnd(0, 255), Rnd(0, 255), Rnd(0, 255))
+	sounds.Play(bounceId, 1, 1, 1, 0, 1)
+End Sub
+
+Sub Activity_KeyPress (KeyCode As Int) As Boolean 'Return True to consume the event
+
+	Private Rep As Int
+	Private Txt As String
+ 
+	If KeyCode = KeyCodes.KEYCODE_BACK Then ' Teste si KeyCode est BackKey
+		Txt = "Voulez-vous vraiment quitter programme ?"
+		Rep = Msgbox2(Txt,"A T T E N T I O N","Oui","","Non",Null)' MessageBox
+		If Rep = DialogResponse.POSITIVE Then ' Si Rep = Oui
+			Return False ' Return = False l’événement ne sera pas consommé
+		Else ' nous quittons le programme
+			Return True ' Return = True l’événement sera consommé pour
+		End If
+		' éviter de quitter le programme
+		'End If
+		'End If
+	End If
+	
+	'Private tst As c
+End Sub
+
+Sub Activity_LongClick
+	
+	Msgbox("Fermeture du programme",Activity.Title) 
+	ToastMessageShow("À la prochaine!",True) : Activity.Finish
+	
+	
+End Sub
