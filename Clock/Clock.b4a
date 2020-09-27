@@ -1,0 +1,81 @@
+﻿Build1=Default,b4a.Clock
+File1=Layout1.bal
+FileGroup1=Default Group
+Group=Default Group
+IconFile=
+Library1=core
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="26"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.DarkTheme)~\n~'End of default text.~\n~
+NumberOfFiles=1
+NumberOfLibraries=1
+NumberOfModules=0
+Version=8.3
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: Clock
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+
+	'Private Button1 As Button
+	Private Label1 As Label
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	Activity.LoadLayout("Layout1")
+
+	Private Hours As Byte
+	Private Minutes As Byte
+	Private Secondes As Byte
+	Private i As Byte
+	
+'	Hours = DateTime.GetHour(Hours) 'not working
+'	Minutes = DateTime.GetMinute(Minutes) 'not working
+	
+	Log("The time now is: " & DateTime.Time(DateTime.Now))
+	
+	'Label1.Text = (Hours & ":" & Minutes & ":" & Secondes)
+	For i = 0 To 59
+		Sleep(1000)
+		Secondes = i
+		Label1.Text = NumberFormat2(Hours, 2, 0, 0, False) & ":" & NumberFormat2(Minutes, 2, 0, 0, False) & ":" & NumberFormat2(Secondes, 2, 0, 0, False)
+		If i = 59 Then
+			Minutes = Minutes + 1
+			i = 0
+			If Minutes = 59 Then
+				Minutes = 0
+				Hours = Hours + 1
+				If Hours > 23 Then
+					Hours = 0
+				End If
+			End If
+		End If
+	Next
+End Sub
+
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
